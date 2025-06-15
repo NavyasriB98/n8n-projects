@@ -1,0 +1,83 @@
+{
+  "name": "project 1",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -280,
+        -60
+      ],
+      "id": "f36fe9c8-ca13-43af-a352-4efcebbb9a86",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "sendTo": "give your email id",
+        "subject": "hello how are you from n8n ",
+        "emailType": "text",
+        "message": "hi this is my first n8n project ",
+        "options": {
+          "appendAttribution": false,
+          "bccList": "give cc email id(optional)"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -60,
+        -60
+      ],
+      "id": "1e511eb3-56db-4124-a816-38cc427b15d9",
+      "name": "Gmail",
+      "webhookId": "6f3a194e-04a9-46f8-a9df-05def4cb694c",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "wcYYadYJyBQqTp",
+          "name": "Gmail account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "MY first project on n8n:\nthis one can send email using trigger node and action node(gmail)\n",
+        "height": 100,
+        "width": 220
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -220,
+        -180
+      ],
+      "typeVersion": 1,
+      "id": "f3907593-47d4-4b09-835a-eba8c52c9dc9",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1cb5b5e8-2d1d-42c3-a597-a5cc72cc13bf",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f60cc6a2fe8b4d3559f161aeb04d77f52fb833aad3c3c6b409a140560e5fd2a3"
+  },
+  "id": "7IwJjTZLzERrPi95",
+  "tags": []
+}
